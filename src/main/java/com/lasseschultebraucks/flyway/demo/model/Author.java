@@ -14,7 +14,7 @@ public class Author {
     @Column(name = "author_name")
     private String name;
 
-    @OneToMany(mappedBy = "authorBooks", cascade = CascadeType.DETACH)
+    @OneToMany(mappedBy = "author", cascade = CascadeType.DETACH)
     private Collection<Book> bookCollection = new ArrayList<>();
 
     public Long getId() {
